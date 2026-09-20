@@ -15,3 +15,4 @@ Once the server is running, open your browser and navigate to `http://localhost:
 ## Contribuidores
 
 - [AKEMI MARLENY CORREA ANGULO](github.com/akemimarleny)
+- [CARLOS MANUEL CASTAÑEDA MENDOZA](https://github.com/SyFranco)
