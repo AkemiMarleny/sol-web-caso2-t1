@@ -1,6 +1,11 @@
 <div class="mx-auto mt-10 w-full max-w-md rounded-2xl bg-white p-6 shadow">
   <h2 class="mb-4 text-center text-xl font-bold">Billetera Digital</h2>
 
+  <div class="mb-6 rounded-xl bg-gray-100 p-4 text-center">
+    <p class="text-sm text-gray-600">Saldo disponible</p>
+    <p class="text-3xl font-bold">S/ {{ saldo().toFixed(2) }}</p>
+  </div>
+
   @if (movimientos().length === 0) {
     <p class="text-center text-gray-500">Aún no hay movimientos.</p>
   } @else {
