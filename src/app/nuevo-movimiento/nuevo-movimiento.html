@@ -1,0 +1,36 @@
+<form class="mt-6 space-y-4" (ngSubmit)="registrar()">
+  <div>
+    <label class="mb-1 block text-sm font-medium text-gray-700" for="monto">Monto</label>
+    <input
+      id="monto"
+      name="monto"
+      type="number"
+      step="0.01"
+      min="0"
+      class="w-full rounded-lg border border-gray-300 px-3 py-2"
+      [ngModel]="monto()"
+      (ngModelChange)="onMontoChange($event)"
+    />
+  </div>
+
+  <div>
+    <label class="mb-1 block text-sm font-medium text-gray-700" for="tipo">Tipo de movimiento</label>
+    <select
+      id="tipo"
+      name="tipo"
+      class="w-full rounded-lg border border-gray-300 px-3 py-2"
+      [ngModel]="tipo()"
+      (ngModelChange)="onTipoChange($event)"
+    >
+      <option value="Recarga">Recarga</option>
+      <option value="Gasto">Gasto</option>
+    </select>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full rounded-lg bg-blue-600 py-2 font-semibold text-white hover:bg-blue-700"
+  >
+    Registrar movimiento
+  </button>
+</form>
