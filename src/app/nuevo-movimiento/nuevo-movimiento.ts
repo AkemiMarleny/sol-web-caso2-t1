@@ -1,4 +1,4 @@
-import { Component, input, output, signal } from '@angular/core';
+import { Component, computed, input, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Movimiento, TipoMovimiento } from '../models/movimiento';
 
@@ -14,6 +14,8 @@ export class NuevoMovimiento {
 
   protected readonly tipo = signal<TipoMovimiento>('Recarga');
   protected readonly monto = signal(0);
+  protected readonly gastoInvalido = computed(() => this.tipo() === 'Gasto' && this.monto() > this.saldo());
+  protected readonly montoInvalido = computed(() => this.monto() <= 0);
 
   protected onTipoChange(valor: TipoMovimiento): void {
     this.tipo.set(valor);
