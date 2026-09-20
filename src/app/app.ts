@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Billetera } from './billetera/billetera';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [Billetera],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('sol-web-caso2-t1');
-}
+export class App {}
